@@ -26,7 +26,7 @@ public interface GreetingService {
      * @param name the name to greet (must not be null or empty)
      *             Der zu begrüßende Name (darf nicht null oder leer sein)
      * @return the formatted greeting, never null
-     *         Die formatierte Begrüßung, niemals null
+     * Die formatierte Begrüßung, niemals null
      * @throws IllegalArgumentException if name is null or empty
      *                                  wenn name null oder leer ist
      */
