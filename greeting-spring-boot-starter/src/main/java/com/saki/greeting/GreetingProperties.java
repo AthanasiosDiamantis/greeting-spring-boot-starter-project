@@ -23,14 +23,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * </pre>
  *
  * @author saki
- * @see GeetingService
+ * @see GreetingService
  * @see GreetingAutoConfiguration
  */
-@ConfigurationProperties(prefix = "geeting")
+@ConfigurationProperties(prefix = "greeting")
 public class GreetingProperties {
 
     /**
-     * Defautlt grreing message / Standard-Begrüßungsnachricht
+     * Default greeting message / Standard-Begrüßungsnachricht
      */
     private String message = "Hello";
 
