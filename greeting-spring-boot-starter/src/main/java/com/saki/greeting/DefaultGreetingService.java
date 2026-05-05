@@ -2,12 +2,9 @@ package com.saki.greeting;
 
 /**
  * Default implementation of {@link GreetingService}.
- * Standard-Implementierung des {@link GreetingService}.
  *
  * <p>This class is automatically created as a Spring Bean by
  * {@link GreetingAutoConfiguration}, unless another implementation exists.</p>
- * <p>Diese Klasse wird automatisch von der {@link GreetingAutoConfiguration}
- * als Spring Bean erstellt, sofern keine andere Implementierung vorhanden ist.</p>
  *
  * @author saki
  * @see GreetingService
@@ -21,9 +18,7 @@ public class DefaultGreetingService implements GreetingService {
      * Constructor injection - best practice in Spring!
      *
      * @param properties the configuration from application.properties
-     *                   Die Konfiguration aus application.properties
      * @throws IllegalArgumentException if properties is null
-     *                                  wenn properties null ist
      */
     public DefaultGreetingService(GreetingProperties properties) {
         if (properties == null) {
@@ -34,7 +29,7 @@ public class DefaultGreetingService implements GreetingService {
 
     @Override
     public String greet(String name) {
-        if (name != null && !name.trim().isEmpty()) {
+        if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name must not be null or empty");
         }
 
